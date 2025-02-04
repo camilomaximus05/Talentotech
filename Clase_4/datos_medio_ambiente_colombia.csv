@@ -1,0 +1,11 @@
+Región;Temperatura (°C);Calidad del Aire;Nivel de Contaminación (PM2.5);Población Afectada;Área Protegida (%);Precipitación (mm);Humedales;Desertificación;Especies en Peligro
+Amazonas;26.5;Buena;12.0;5000;15.2;3000;True;Moderada;120
+Andina;20.0;Moderada;35.2;12000;20.0;1200;False;Alta;
+Pacífica;;Mala;67.8;;NA;;True;Baja;45
+Orinoquía;28.3;Buena;NaN;8000;;1800;;Nula;N/D
+;25.1;;42.0;2500;18.0;MISSING;False;;78
+Caribe;31.0;ERROR;;ERROR;10.5;800;N/A;ERROR;89
+Insular;ERROR;Regular;55.1;4000;12.0;2400;True;Moderada;ERROR
+Andina;19.0;Buena;29.0;10000;25.0;1500;False;Baja;34
+Caribe;29.0;Mala;70.0;20000;20.0;2700;ERROR;Alta;56
+Pacífica;27.5;Moderada;30.5;5000;ERROR;3200;True;Nula;100

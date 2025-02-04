@@ -55,3 +55,6 @@
         WHERE {Nombre del atributo} = {El valor que desea buscar};
         ```
 
+# **Clase #4 (Repaso python)**
+
+- ****
