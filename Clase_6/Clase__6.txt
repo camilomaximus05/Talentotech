@@ -1,0 +1,31 @@
+Con base en el contenido del archivo SQL del sector minero energético, que contiene tablas como comunidades_energeticas y eficiencia_energetica, por favor responder las siguientes preguntas que requieren consultas SQL con diversos operadores y conceptos:
+
+1.	Consulta con INSERT:
+Inserta una nueva comunidad energética en la tabla comunidades_energeticas, ubicada en el departamento de Boyacá y que utiliza energía hidroeléctrica.
+
+2.	Consulta con DELETE:
+Elimina todos los registros de la tabla eficiencia_energetica en los que la energía generada (kw_h_generado) fue inferior a 1000 kWh.
+
+3.	Consulta con JOIN:
+Obtén el nombre de las comunidades y el tipo de energía asociado a sus proyectos, realizando un JOIN entre las tablas comunidades_energeticas, proyectos y tipos_energia.
+
+4.	Consulta con operadores lógicos:
+Encuentra todas las comunidades energéticas cuya ubicación sea en el sur de Colombia (p. ej., Nariño, Cauca) y que tengan proyectos asociados con tiempos muertos mayores a 2 días.
+
+5.	Consulta con actualización (UPDATE):
+Actualiza los costos de producción en la tabla eficiencia_energetica, incrementándolos en un 10% para los proyectos que generaron más de 1500 kWh.
+
+6.	Consulta con COUNT:
+¿Cuántas comunidades energéticas utilizan energía solar?
+
+7.	Consulta con GROUP BY:
+Calcula el costo promedio de producción por cada tipo de energía en la tabla eficiencia_energetica.
+
+8.	Consulta con agregación (SUM):
+Determina la cantidad total de energía generada en el año 2022 por todos los proyectos en la tabla eficiencia_energetica.
+
+9.	Consulta con operadores relacionales:
+Encuentra los proyectos en los que el costo de comercialización supera el costo de producción.
+
+10.	Consulta con subconsulta:
+Obtén los nombres de las comunidades energéticas cuyos proyectos tienen el mayor valor del indicador económico (indicador_economico).
