@@ -1,0 +1,34 @@
+INSERT INTO tipos_energia (id_tipo,tipo) VALUES(6,'hidroeléctrica');
+
+INSERT INTO proyectos (id_proyecto,nombre, descripcion, tipo_energia, ubicacion, fecha_inicio, fecha_fin) 
+VALUES (6,'Hidroboyacá','creacón de una represa para boyacá',6,'boyacá','2024-02-27','2025-02-27');
+
+INSERT INTO comunidades_energeticas (proyecto_asociado, nombre, descripcion, ubicacion)
+VALUES (6,'Rio de oro','ubicada en Boyacá cerca de un rio','Boyacá');
+
+DELETE FROM eficiencia_energetica WHERE kw_h_generado<1000;
+
+SELECT comunidades_energeticas.nombre, tipos_energia.tipo FROM comunidades_energeticas JOIN proyectos ON comunidades_energeticas.proyecto_asociado = proyectos.id_proyecto JOIN tipos_energia on proyectos.tipo_energia = tipos_energia.id_tipo;
+ 
+SELECT comunidades_energeticas.id_comunidad,comunidades_energeticas.nombre,proyectos.id_proyecto , eficiencia_energetica.tiempos_muertos
+FROM comunidades_energeticas
+JOIN proyectos 
+    ON comunidades_energeticas.proyecto_asociado = proyectos.id_proyecto 
+JOIN eficiencia_energetica 
+    ON eficiencia_energetica.proyecto_id = proyectos.id_proyecto
+WHERE (comunidades_energeticas.ubicacion = 'Valle del Cauca' 
+   OR comunidades_energeticas.ubicacion = 'Cauca' 
+   OR comunidades_energeticas.ubicacion = 'Nariño' 
+   OR comunidades_energeticas.ubicacion = 'Putumayo' 
+   OR comunidades_energeticas.ubicacion = 'Bolívar')
+   AND tiempos_muertos > 2;
+
+UPDATE eficiencia_energetica SET costo_produccion=costo_produccion*1.10 WHERE costo_produccion > 1500;
+
+SELECT COUNT(*) FROM comunidades_energeticas 
+JOIN proyectos 
+	ON proyectos.id_proyecto = comunidades_energeticas.proyecto_asociado 
+JOIN tipos_energia 
+	ON proyectos.tipo_energia = tipos_energia.id_tipo 
+WHERE tipos_energia.tipo='Solar';
+
